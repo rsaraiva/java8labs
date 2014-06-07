@@ -3,16 +3,13 @@
  */
 package com.rsaraiva.labs.java8labs.controller;
 
+import com.rsaraiva.labs.java8labs.service.EventService;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
 import br.com.caelum.vraptor.Result;
-import com.rsaraiva.labs.java8labs.model.Event;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Calendar;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 @Controller
 public class EventController implements Serializable {
