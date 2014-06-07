@@ -17,9 +17,9 @@ public class EventController implements Serializable {
     @Inject private EventService service;
     @Inject private Result result;
 
-    @Get("/events/add/{description}/{day}/{month}/{year}")
-    public void event(String description, int day, int month, int year) {
-        service.persist(description, LocalDate.of(year, month, day));
+    @Get("/events/add/{description}/{date}")
+    public void add(String description, LocalDate date) {
+        service.persist(description, date);
         result.nothing();
     }
 }
